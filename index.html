@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catur On-Chain</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Catur On-Chain</h1>
+  <div class="hdr"><span id="net" class="pill">Belum terhubung</span><button id="connect">Hubungkan wallet</button></div>
+</header>
+<main>
+  <section class="play">
+    <div id="status" class="status" role="status">Hubungkan wallet untuk mulai.</div>
+    <div id="board" class="board" aria-label="Papan catur"></div>
+    <label class="promo">Promosi pion ke
+      <select id="promo"><option value="q">Menteri</option><option value="r">Benteng</option><option value="b">Gajah</option><option value="n">Kuda</option></select>
+    </label>
+  </section>
+  <aside>
+    <div class="card">
+      <button id="create">Buat game baru</button>
+      <div class="row">
+        <input id="gid" type="number" min="1" placeholder="ID game">
+        <button id="join">Gabung</button>
+        <button id="open" class="ghost">Buka</button>
+      </div>
+    </div>
+    <div class="card" id="info">Belum ada game dibuka.</div>
+    <div class="card actions" id="actions"></div>
+    <div class="card"><h2>Transaksi</h2><ol id="log" class="log"></ol></div>
+  </aside>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
